@@ -47,6 +47,10 @@ function changeUsername()
 
 	var desiredUsername = document.getElementById("desiredUsername").value.toLowerCase().replace(/\s+/g, '');
 	
+	if((desiredUsername.indexOf("@") !== -1) || (desiredUsername.indexOf("#") != -1)){
+		alert("Your username contains \"#\" or \"@\". Please remove the character(s) from you username" )
+	}else{
+
 	Parse.User.logIn( currentUsername, password,
 	{
 		success: function( user )
@@ -73,4 +77,5 @@ function changeUsername()
 			alert(" The username and password did not match. ");
 		}
 	});	//end Parse logIn
+  }
 }
