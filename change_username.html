@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Change Username</title>
+
+		<!-- Stylesheets and fonts-->
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet">
+		<link href="css/foodchainTwo.css" rel="stylesheet">
+		<link href="img/logo.ico" rel="shortcut icon" type="image/x-icon">
+		
+		<!--Javascript-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+		<script type="text/javascript" src="change_username_email.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+  
+	<body class="greenBody">
+		<div class="wrapper">
+
+			<div class="jumbotron">	
+				<p class="header"> <img src="img/logo.png" width="50" height="50" alt="FoodChain Logo"/> FoodChain </p>
+			</div>
+
+			<div class="container container-login">	<!--Container for main sign up and log in (white space)-->
+			
+				<h2> Change Username </h2>
+				<p class="small"> We do not guarantee your current username will be available to you in the future if you change it now. </p>
+					
+				<!--Prompt restaurant about their username after signup-->
+				<form class="form-signin" role="form" id="username_form">
+				
+					<input type="text" id="currentUsername" class="form-control" pattern=".{1,32}" placeholder="Current Username" title="Usernames must be 1 to 32 characters in length" required autofocus>
+				
+					<p></p>
+				
+					<input type="password" id="UsernamePassword" class="form-control" pattern=".{6,32}" placeholder="Password" title="Enter your password here" required>
+				
+					<p></p>
+				
+					<input type="text" id="desiredUsername" class="form-control" pattern=".{1,32}" placeholder="Desired Username(1 to 32 characters)" title="Usernames must be 1 to 32 characters in length" required autofocus>
+					
+					<p></p>
+					
+					<button class="btn btn-lg btn-primary btn-block" type="button" onclick="changeUsername()" title="Clicking this button will permanently change your Username (if your desired Username is available)">Change Username</button>
+					
+				</form>
+	
+			</div> <!-- Close white space container -->
+
+			<!--Motto has TM in it, TM is pretty large so maybe should be taken out, &#1053; is TM-->
+			<p class="motto"> 
+				Sharing the meal experience, 
+				</br>for better or worse &#0153;
+			</p>
+			<div class="push"></div>	<!--Part of footer fix-->
+		</div> <!--Close wrapper div-->
+		
+		<!--Copyright and languages, &#0169; is (C)-->
+		<!--TODO: make more language pages(not needed for 1.0) and update them into a menu or long list of languages, link color looks a bit odd on green-->
+		<div class="footer">
+			<div class="container footer">
+				<hr>
+				<p class = "foot" >FoodChain &#0169; 2015</p>
+				<a href="#">English</a>
+			</div>
+		</div>
+
+	</body>
+	
+</html>
